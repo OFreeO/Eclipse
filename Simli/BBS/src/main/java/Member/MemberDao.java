@@ -44,7 +44,7 @@ public class MemberDao {
 		try {
 			Class.forName(DBIn.jar);
 			conn = DriverManager.getConnection(DBIn.url,DBIn.user,DBIn.pw);
-			pstmt = conn.prepareStatement("SELECT * FROM DBS.user where userID=? and userPWD=?");
+			pstmt = conn.prepareStatement("SELECT * FROM user where userID=? and userPWD=?");
 			pstmt.setString(1, id);
 			pstmt.setString(2, pwd);
 			

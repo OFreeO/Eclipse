@@ -1,6 +1,7 @@
+
 <%@page import="Member.MemberDao"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +10,8 @@
 </head>
 <body>
 <%
-	String id = request.getParameter("ID");
-	String pwd = request.getParameter("PWD");
+	String id = request.getParameter("id");
+	String pwd = request.getParameter("pwd");
 	String loginsave = request.getParameter("loginsave");
 %>
 <%=id%>
@@ -20,18 +21,19 @@
 	MemberDao dao = new MemberDao();
 	boolean ret = dao.memberloginchk(id,pwd);
 	if(ret){
-		out.println("ทฮฑืภฮฐกดษ");
+		out.println("๋ก๊ทธ์ธ๊ฐ€๋ฅ");
 		
 		session.setAttribute("id",id);
 		session.setAttribute("pwd",pwd);
+		response.sendRedirect("index.jsp");
 		
 	}else{
 %>
  <script>
-	alert("ทฮฑืภฮ บาฐก!")
+	alert("๋ก๊ทธ์ธ ๋ถ๊ฐ€!")
  </script>
 <%
-		out.println("ทฮฑืภฮบาฐก");
+		out.println("๋ก๊ทธ์ธ๋ถ๊ฐ€");
 		response.sendRedirect("index.jsp");
 	}
 %>

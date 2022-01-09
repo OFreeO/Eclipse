@@ -6,10 +6,10 @@
   <!-- Links -->
   <ul class="nav navbar-nav navbar-left">
     <li class="nav-item">
-      <a class="nav-link" href="#">자유게시판</a>
+      <a class="nav-link" href="FreeBoard.jsp">자유게시판</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">질문게시판</a>
+      <a class="nav-link" href="QnABoard.jsp">질문게시판</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -17,7 +17,7 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">권용규</a>
-        <a class="dropdown-item" href="#">깃허브</a>
+        <a class="dropdown-item" href="https://github.com/OFreeO">깃허브</a>
       </div>
     </li>
   </ul>
